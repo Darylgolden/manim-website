@@ -1,0 +1,55 @@
+@import "../../variables";
+.sponsors-div {
+    max-width: 1200px;
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    .icon-div {
+        svg {
+            width: 50px;
+            height: 50px;
+        }
+        margin-left: auto;
+        margin-right: auto;
+    }
+    span {
+        padding-bottom: 1rem;
+    }
+    .sponsor-flex {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+
+        .sponsor {
+            flex: 0 0 50%;
+            text-align: center;
+
+            padding: 20px;
+            transition: transform 0.4s ease-out 0s;
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+            .sponsor-title {
+                font-size: 18px;
+                padding: 0.5rem 0;
+                margin: 0;
+            }
+            .sponsor-textone {
+                font-size: 14px;
+                margin: 0;
+            }
+        }
+        .sponsor:hover {
+            transform: scale(1.2);
+        }
+    }
+}
+
+@media (min-width: $tab-screens) {
+    .sponsor {
+        max-width: 25% !important;
+        flex: 0 0 33.3333% !important;
+    }
+}

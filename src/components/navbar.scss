@@ -1,0 +1,89 @@
+@import "../variables";
+.main-header {
+    top: 0px;
+    position: sticky;
+    background-color: $navbar-background-light;
+
+    .main-header-div {
+        padding-left: 1rem;
+        padding-right: 2rem;
+        padding-top: 0px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        min-height: 70px;
+        display: flex;
+        justify-content: space-between;
+
+        .navbar-toggler-button {
+            height: 100%;
+            display: inline-flex;
+            background-color: inherit;
+
+            padding: 1rem;
+
+            border: 1px solid rgb(54, 58, 63);
+            border-radius: 10px;
+            background: rgb(31, 32, 32) none repeat scroll 0% 0%;
+            color: rgb(255, 255, 255);
+
+            visibility: hidden;
+        }
+        .logo-and-links-div {
+            display: flex;
+            align-items: center;
+
+            .manim-logo-a {
+                color: #fff;
+                padding: 0.5rem;
+                font-size: 1.25rem;
+                text-decoration: none;
+                background-color: transparent;
+            }
+            .nav-items {
+                display: initial;
+                padding-right: 0.5rem;
+                nav {
+                    display: block;
+                    ul {
+                        margin: 0px;
+                        padding: 0px;
+                        list-style: none;
+                        display: flex;
+                        li {
+                            color: $navbar-links-color;
+                            font-size: 1.1rem;
+                            font-weight: 700;
+                            a,
+                            div {
+                                display: inline-block;
+                                text-decoration: none;
+                                color: inherit;
+                                padding: 10px;
+                                border-radius: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @media (max-width: $mobile-screens) {
+            // .navbar-toggler-button {
+            //     visibility: visible;
+            // }
+            .logo-and-links-div {
+                .nav-items {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.dark {
+    .main-header {
+        background-color: $navbar-background-dark;
+    }
+}

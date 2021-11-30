@@ -1,0 +1,149 @@
+@import "../global.scss";
+.tippy-text {
+    font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans",
+        sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+}
+.index-main-div {
+    display: flex;
+    padding: 1rem;
+    padding-left: 0;
+    padding-right: 0;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    flex-direction: column;
+    font-size: 20px;
+    text-align: center;
+    font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+        "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+        "Segoe UI Symbol", "Noto Color Emoji";
+    h2 {
+        font-family: "Righteous", -apple-system, BlinkMacSystemFont, "Segoe UI",
+            Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans",
+            sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+            "Noto Color Emoji";
+    }
+    .about-manim-div {
+        width: 100%;
+        border-bottom: 1px solid $border-color-light;
+        p {
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+        }
+        .button-div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            color: #fff;
+            .button-link {
+                display: inline-flex;
+                align-items: center;
+                padding: 14px 20px;
+                background: $button-background-light;
+                text-decoration: none;
+                text-transform: capitalize;
+                color: inherit;
+                font-weight: 400;
+                font-size: 16px;
+                margin: 0 0 1rem 0;
+                border-radius: 4px;
+                border: 0;
+            }
+        }
+        .install-manim-div {
+            background-color: $button-background-light;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0rem;
+            padding: 15px 0;
+            font-weight: 700;
+            font-size: 18px;
+            margin: 1rem 0;
+            .install-manim-text {
+                padding: 10px 14px;
+                display: inline-flex;
+                align-items: center;
+            }
+            .install-manim-button {
+                margin-top: 0;
+                margin-bottom: 0;
+                display: flex;
+                background: $pip-install-manim-button-bg-light;
+                font-size: 14px;
+                font-weight: 400;
+                margin: 5px;
+                .install-manim-logo {
+                    display: inline-flex;
+                    align-items: center;
+                    background: rgba(255, 255, 255, 0.25);
+                    padding: 5px 15px;
+                }
+                .install-manim-text {
+                    font-size: 14px;
+                    cursor: pointer;
+                    white-space: nowrap;
+                    a {
+                        text-decoration: none;
+                        color: inherit;
+                    }
+                }
+            }
+        }
+    }
+}
+.dark {
+    .button-div {
+        .button-link {
+            background: $button-background-dark !important;
+        }
+    }
+    .install-manim-div {
+        background: $button-background-dark !important;
+    }
+    .install-manim-button {
+        background: $pip-install-manim-button-bg-dark !important;
+    }
+    .about-manim-div {
+        border-bottom: 1px solid $border-color-dark !important;
+    }
+}
+
+@media (min-width: $tab-screens) {
+    .index-main-div {
+        font-size: 26px !important;
+        padding: 2rem 0 !important;
+    }
+    .button-div {
+        flex-direction: row !important;
+        gap: 1rem;
+        .button-link {
+            font-size: 18px !important;
+        }
+    }
+    .about-manim-div {
+        p {
+            padding-bottom: 1rem !important;
+        }
+    }
+    .install-manim-div {
+        gap: 1rem !important;
+        flex-direction: row !important;
+        font-size: 20px !important;
+        .install-manim-button {
+            font-size: 16px !important;
+            .install-manim-text {
+                font-size: 18px !important;
+            }
+        }
+    }
+}
